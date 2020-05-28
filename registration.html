@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    
+  </head>
+  <body>
+      <h2 class="rl1">Fill the registration form for </h2>
+<h3 id="tt" class="rl1"></h3>
+<script>
+  document.getElementById("tt").innerHTML=localStorage.getItem("first");
+</script>
+
+<div class="container register">
+  <div class="row">
+      <div class="col-md-3 register-left">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRkHuqNjpTJBAD8Hr5qP_1c5DFP0DzX4MK7Ns7hWVTumEKPC_C1&usqp=CAU" width=70% alt=""/>
+                      
+          <h3>Thanks</h3>
+          <p class="regp">Provide the details in the given form to confirm your order</p>
+         
+      </div>
+      <div class="col-md-9 register-right">
+                  <h3 class="register-heading" style="color: black;">Registration Form</h3>
+                  <div class="row register-form">
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="First Name *" value=""/>
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Last Name *" value="" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" class="form-control" placeholder="Country *" value="" />
+                          </div>
+                          <div class="form-group">
+                              <input type="password" class="form-control"  placeholder="Complete Address *" value="" />
+                          </div>
+                                               </div>
+                      <div class="col-md-6">
+                          <div class="form-group">
+                              <input type="email" class="form-control" placeholder="Your Email *" value="" />
+                          </div>
+                          <div class="form-group">
+                              <input type="text" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" value="" />
+                          </div>
+                          <div class="form-group">
+                              <select class="form-control">
+                                  <option class="hidden"  selected disabled>Select Your City</option>
+                                  <option>Karachi</option>
+                                  <option>Lahore</option>
+                                  <option>Islamabad</option>
+                              </select>
+                          </div>
+                          <div class="form-group" style="color:rgb(117, 117, 117);">
+                            <label class="radio inline" > 
+                                <input type="radio" name="gender" value="male" checked>
+                                <span> Male </span> 
+                            </label>
+                            <label class="radio inline"> 
+                                <input type="radio" name="gender" value="female">
+                                <span>Female </span> 
+                            </label>
+                       </div>
+
+                       <button class="btn1 btn-lg btn-dark">Confirm </button>
+                      </div>
+                  </div>
+              
+             
+          
+      </div>
+  </div>
+
+</div>
+
+</body>
+</html>

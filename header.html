@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@600&amp;family=Monstserrat:wght@500&amp;family=Sacramento&amp;display=swap">
+    <script>
+        $(document).ready(function () {
+            $(".dropdown").hover(function () {
+                var dropdownMenu = $(this).children(".dropdown-menu");
+                if (dropdownMenu.is(":visible")) {
+                    dropdownMenu.parent().toggleClass("open");
+                }
+            });
+        });
+
+        $(document).ready(function () {
+
+            var menu = $('.navbar');
+            var origOffsetY = menu.offset().top;
+
+            function scroll() {
+
+                if ($(window).scrollTop() >= origOffsetY) {
+
+                    $(menu).addClass('navbar-fixed-top');
+                } else {
+
+                    $(menu).removeClass('navbar-fixed-top');
+                }
+            }
+
+            document.onscroll = scroll;
+
+        });
+     
+    </script>
+</head>
+
+<body>
+    <div class="bs-example"></div>
+    <!--Navbar with dropdown menu-->
+    <nav id="myNavbar" class="navbar navbar-fixed" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-family: cursive; font-size: 2.5rem;">FarBeau</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav ">
+                    <li><a href="index.html"> <span class="glyphicon glyphicon-home"></span> &nbsp; Home</a></li>
+                    <li><a href="aboutus.html"><span class="glyphicon glyphicon-user"></span> &nbsp;About Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span class="glyphicon glyphicon-bed"></span> 
+                            &nbsp;Room Ideas <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="living.html">Living Room</a></li>
+                            <li><a href="drawing.html">Drawing Room</a></li>
+                            <li><a href="bedroom.html">Bed Room</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="contact.html"><span class="glyphicon glyphicon-phone"></span> &nbsp;Contact Us</a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+</body>
+
+</html>
